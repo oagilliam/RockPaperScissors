@@ -24,6 +24,7 @@ while True:
     #This section compares the player's option with the computer's option. 
     comp_rps = random.choice(list(rps_dict.values()))
     comp = comp_rps
+    print('test ' + comp)
     
     if comp == 'rock':
         if play_val == 'paper':
