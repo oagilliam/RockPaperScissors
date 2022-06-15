@@ -27,27 +27,31 @@ while True:
     
     if comp == 'rock':
         if play_val == 'paper':
-            print('You win! Computer picked'+comp)
+            print('You win! Computer picked '+ comp)
+            break
         elif play_val == 'scissors':
-            print('You lose! Computer picked'+comp)
+            print('You lose! Computer picked '+ comp)
+            break
         elif play_val == 'rock':
-            print('Game tied! You and computer picked' + comp)
-            sys.exit()
-    
-    if comp == 'paper':
+            print('Game tied! You and computer picked ' + comp)
+            break
+    elif comp == 'paper':
         if play_val == 'rock':
-            print('You win! Computer picked'+comp)
+            print('You lose! Computer picked '+ comp)
+            break
         elif play_val == 'scissors':
-            print('You lose! Computer picked'+comp) 
+            print('You win! Computer picked '+ comp) 
+            break
         elif play_val == 'paper':
-            print('Game tied! You and computer picked' + comp)
-            sys.exit()
-        
-    if comp == 'scissors':
+            print('Game tied! You and computer picked ' + comp)
+            break
+    elif comp == 'scissors':
         if play_val == 'paper':
-            print('You win! Computer picked'+ comp)
+            print('You lose! Computer picked '+ comp)
+            break
         elif play_val == 'rock':
-            print('You lose! Computer picked'+ comp)
+            print('You win! Computer picked '+ comp)
+            break
         elif play_val == 'scissors':
-            print('Game tied! You and computer picked' + comp)
-            sys.exit()
+            print('Game tied! You and computer picked ' + comp)
+            break
