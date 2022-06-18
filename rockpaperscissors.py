@@ -14,30 +14,25 @@ while True:
     player = input('Select rock(1), paper(2), or scissors(3):')
     for key in rps_dict:
         if player in rps_dict:
-            play_val = rps_dict.get(key)
+            play_val = rps_dict[player]
             print('This is the value:' + play_val)
             break
         elif player not in rps_dict:
             print(type(player))
             print('Error! Not an option!')
             sys.exit()
+            
     
     #This section compares the player's option with the computer's option. 
-    r = 'rock'
-    p = 'paper'
-    s = 'scissors'
     comp_rps = random.choice(list(rps_dict.values()))
     comp = comp_rps
     
-    if comp == r and play_val == p or comp == p and play_val == s or comp == s and play_val == r:
-        print(play_val)
+    if comp == 'rock' and play_val == 'paper' or comp == 'paper' and play_val == 'scissors' or comp == 'scissors' and play_val == 'rock':
         print('You win! Computer picked ' + comp)
         break
-    elif comp == r and play_val == s or comp == p and play_val == r or comp == s and play_val == p:
-        print(play_val)
+    elif comp == 'rock' and play_val == 'scissors' or comp == 'paper' and play_val == 'rock' or comp == 'scissors' and play_val == 'paper':
         print('You lose! Computer picked ' + comp)
         break
-    elif comp == r and play_val == r or comp == p and play_val == p or comp == s and play_val == s:
-        print(play_val)
+    elif comp == 'rock' and play_val == 'rock' or comp == 'paper' and play_val == 'paper' or comp == 'scissors' and play_val == 'scissors':
         print('Game tied! Computer picked ' + comp)
         break
