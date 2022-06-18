@@ -1,5 +1,5 @@
 #Created by: Olivia G.
-#Completion date: 
+#Completion date: 6/17/2022
 #Prompt: Two player will enter one option out of rock, paper, and scissors. The winning player will be displayed.
 #--Scissors beats paper.
 #--Paper beats rock.
@@ -23,7 +23,7 @@ while True:
             sys.exit()
             
     
-    #This section compares the player's option with the computer's option. 
+    #This section compares the player's option with the computer's option and displays the winner. 
     comp_rps = random.choice(list(rps_dict.values()))
     comp = comp_rps
     
